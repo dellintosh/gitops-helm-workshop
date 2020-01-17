@@ -2,7 +2,7 @@ apiVersion: flagger.app/v1alpha3
 kind: Canary
 metadata:
   name: www
-  namespace: prod
+  namespace: default
   annotations:
     fluxcd.io/ignore: "false"
 spec:
