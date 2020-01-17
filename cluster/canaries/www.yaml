@@ -2,7 +2,7 @@ apiVersion: flagger.app/v1alpha3
 kind: Canary
 metadata:
   name: www
-  namespace: default
+  namespace: prod
   annotations:
     fluxcd.io/ignore: "false"
 spec:
@@ -34,4 +34,4 @@ spec:
       - name: load-test
         url: http://load-tester.prod/
         metadata:
-          cmd: "hey -z 2m -q 10 -c 2 http://www:9898/"
+          cmd: "hey -z 2m -q 10 -c 2 http://www.prod:9898/"
