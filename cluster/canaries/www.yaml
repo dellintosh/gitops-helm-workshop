@@ -11,7 +11,7 @@ spec:
     kind: Deployment
     name: www
   service:
-    port: 9898
+    port: 80
   canaryAnalysis:
     interval: 10s
     stepWeight: 5
@@ -34,4 +34,4 @@ spec:
       - name: load-test
         url: http://load-tester.prod/
         metadata:
-          cmd: "hey -z 2m -q 10 -c 2 http://www.prod:9898/"
+          cmd: "hey -z 2m -q 10 -c 2 http://www.prod/"

@@ -11,7 +11,7 @@ service:
   enabled: true
   type: ClusterIP
   metricsPort: 9797
-  httpPort: 9898
+  httpPort: 80
   externalPort: 80
   nodePort: 31198
 
