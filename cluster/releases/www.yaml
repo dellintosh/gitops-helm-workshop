@@ -16,10 +16,10 @@ spec:
     path: cluster/charts/www
   values:
     image:
-      # repository: stefanprodan/www
+      repository: 277866474112.dkr.ecr.us-east-1.amazonaws.com/www
       tag: TRADE-209-42e0931
     service:
-      enabled: true
+      enabled: false
       type: ClusterIP
     ingress:
       enabled: true
