@@ -1,11 +1,8 @@
 {{- if .Values.ingress.enabled -}}
-{{- $fullName := include "www.fullname" . -}}
-{{- $servicePort := .Values.service.port -}}
-{{- $ingressPath := .Values.ingress.path -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: {{ $fullName }}
+  name: {{ template "www.fullname" . }}
   labels:
     app: {{ template "www.name" . }}
     chart: {{ template "www.chart" . }}
@@ -21,17 +18,17 @@ spec:
     - host: {{ . }}
       http:
         paths:
-          - path: {{ $ingressPath }}
+          - path: {{ .Values.ingress.path }}
             backend:
-              serviceName: {{ $fullName }}
+              serviceName: {{ template "www.fullname" . }}
               servicePort: http
   {{- end -}}
   {{- if not .Values.ingress.hosts -}}
     - http:
         paths:
-          - path: {{ $ingressPath }}
+          - path: {{ .Values.ingress.path }}
             backend:
-              serviceName: {{ $fullName }}
+              serviceName: {{ template "www.fullname" . }}
               servicePort: http
   {{- end -}}
 {{- end -}}
