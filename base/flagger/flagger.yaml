@@ -1,8 +1,3 @@
-# helm upgrade -i flagger flagger/flagger --wait \
-# --namespace linkerd \
-# --set crd.create=false \
-# --set metricsServer=http://linkerd-prometheus:9090 \
-# --set meshProvider=linkerd
 ---
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
