@@ -17,7 +17,7 @@ spec:
   values:
     image:
       repository: 277866474112.dkr.ecr.us-east-1.amazonaws.com/www
-      tag: dev-aecaa7b
+      tag: dev-22da5fd
     service:
       enabled: false
       type: ClusterIP
