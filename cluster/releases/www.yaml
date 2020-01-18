@@ -11,9 +11,9 @@ metadata:
 spec:
   releaseName: www
   chart:
-    git: git@github.com:dellintosh/gitops-helm-workshop
+    git: git@github.com:coin-lion/www.git
     ref: master
-    path: cluster/charts/www
+    path: charts/www
   values:
     image:
       repository: 277866474112.dkr.ecr.us-east-1.amazonaws.com/www
