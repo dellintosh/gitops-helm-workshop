@@ -7,7 +7,7 @@ metadata:
   annotations:
     fluxcd.io/ignore: "false"
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.chart-image: glob:TRADE-*
+    fluxcd.io/tag.chart-image: glob:dev-*
 spec:
   releaseName: www
   chart:
