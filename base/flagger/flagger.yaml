@@ -15,9 +15,12 @@ metadata:
 spec:
   releaseName: flagger
   chart:
-    repository: https://flagger.app
-    name: flagger/flagger
-    version: 0.22.0
+    git: git@github.com:weaveworks/flagger
+    ref: refs/tags/0.22.0
+    path: charts/flagger
+    # repository: https://flagger.app
+    # name: flagger/flagger
+    # version: 0.22.0
   values:
     crd.create: false
     metricsServer: http://linkerd-prometheus:9090
