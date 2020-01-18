@@ -17,7 +17,7 @@ spec:
   values:
     image:
       repository: 277866474112.dkr.ecr.us-east-1.amazonaws.com/www
-      tag: TRADE-209-42e0931
+      tag: dev-e350476
     service:
       enabled: false
       type: ClusterIP
