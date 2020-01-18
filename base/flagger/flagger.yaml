@@ -22,6 +22,6 @@ spec:
     # name: flagger/flagger
     # version: 0.22.0
   values:
-    crd.create: false
+    crd.create: "false"
     metricsServer: http://linkerd-prometheus:9090
     meshProvider: linkerd
