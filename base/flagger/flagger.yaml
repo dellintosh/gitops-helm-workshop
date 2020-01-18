@@ -1,0 +1,23 @@
+# helm upgrade -i flagger flagger/flagger --wait \
+# --namespace linkerd \
+# --set crd.create=false \
+# --set metricsServer=http://linkerd-prometheus:9090 \
+# --set meshProvider=linkerd
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: flagger
+  namespace: linkerd
+  annotations:
+    fluxcd.io/ignore: "false"
+    fluxcd.io/automated: "false"
+spec:
+  releaseName: flagger
+  chart:
+    repository: https://flagger.app
+    name: flagger/flagger
+  values:
+    crd.create: false
+    metricsServer: http://linkerd-prometheus:9090
+    meshProvider: linkerd
