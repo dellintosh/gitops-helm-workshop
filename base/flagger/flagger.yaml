@@ -17,6 +17,7 @@ spec:
   chart:
     repository: https://flagger.app
     name: flagger/flagger
+    version: 0.22.0
   values:
     crd.create: false
     metricsServer: http://linkerd-prometheus:9090
